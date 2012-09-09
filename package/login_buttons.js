@@ -82,7 +82,9 @@
       };
     },
 
-    'click #login-buttons-logout': function() {
+    'click #login-buttons-logout': function(e) {
+      e.preventDefault();
+
       Meteor.logout();
       resetSession();
     }
@@ -128,7 +130,8 @@
     'click #login-buttons-password': function () {
       loginOrSignup();
     },
-    'click #signup-link': function () {
+    'click #signup-link': function (e) {
+      e.preventDefault();
       resetMessages();
 
       // store values of fields before swtiching to the signup form
@@ -155,7 +158,8 @@
 
       document.getElementById('login-password').value = password;
     },
-    'click #forgot-password-link': function () {
+    'click #forgot-password-link': function (e) {
+      e.preventDefault();
       resetMessages();
 
       // store values of fields before swtiching to the signup form
@@ -309,7 +313,9 @@
   //
 
   Template.loginButtonsServicesDropdown.events = {
-    'click .login-link-text': function () {
+    'click .login-link-text': function (e) {
+      e.preventDefault();
+
       Session.set(DROPDOWN_VISIBLE_KEY, true);
       // IE <= 7 has a z-index bug that means we can't just give the
       // dropdown a z-index and expect it to stack above the rest of
@@ -327,7 +333,8 @@
         if (n.style.zIndex === 0)
           n.style.zIndex = 1;
     },
-    'click .login-close-text': function () {
+    'click .login-close-text': function (e) {
+      e.preventDefault();
       resetSession();
     }
   };
