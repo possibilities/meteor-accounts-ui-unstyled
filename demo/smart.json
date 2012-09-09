@@ -6,6 +6,7 @@
   "packages": {
     "accounts-ui-unstyled": {
       "path": "../package"
-    }
+    },
+    "deploy-config": "0.0.3"
   }
 }
