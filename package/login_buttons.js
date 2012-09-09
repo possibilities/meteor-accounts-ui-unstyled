@@ -30,7 +30,8 @@
   //
 
   Template.loginButtons.events = {
-    'click #login-buttons-Facebook': function () {
+    'click #login-buttons-Facebook': function (e) {
+      e.preventDefault();
       try {
         Meteor.loginWithFacebook();
       } catch (e) {
@@ -43,7 +44,8 @@
       }
     },
 
-    'click #login-buttons-Google': function () {
+    'click #login-buttons-Google': function (e) {
+      e.preventDefault();
       try {
         Meteor.loginWithGoogle();
       } catch (e) {
@@ -56,7 +58,8 @@
       };
     },
 
-    'click #login-buttons-Weibo': function () {
+    'click #login-buttons-Weibo': function (e) {
+      e.preventDefault();
       try {
         Meteor.loginWithWeibo();
       } catch (e) {
@@ -69,7 +72,8 @@
       };
     },
 
-    'click #login-buttons-Twitter': function () {
+    'click #login-buttons-Twitter': function (e) {
+      e.preventDefault();
       try {
         Meteor.loginWithTwitter();
       } catch (e) {
