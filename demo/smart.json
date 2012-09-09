@@ -1,0 +1,11 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "auth"
+  },
+  "packages": {
+    "accounts-ui-unstyled": {
+      "path": "../package"
+    }
+  }
+}
