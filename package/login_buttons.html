@@ -65,10 +65,12 @@
       </div>
       {{/if}}
     {{else}}
-      <a href="#" class="login-button" id="login-buttons-{{name}}">
-        <div class="login-image" id="login-buttons-image-{{name}}"></div>
-        Sign in with {{name}}
-      </a>
+      <div class="login-services">
+        <a href="#" class="login-button" id="login-buttons-{{name}}">
+          <div class="login-image" id="login-buttons-image-{{name}}"></div>
+          Sign in with {{name}}
+        </a>
+      </div>
     {{/if}}
   {{/each}}
 </template>
